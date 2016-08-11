@@ -20,18 +20,98 @@
 #Q2: Now use the other DS too!
 
 
-first = {'fruit1': {'name': 'orange', 'city': 'SF', 'price': 5},
-         'fruit2': {'name': 'orange', 'city': 'LA', 'price': 6},
-         'fruit3': {'name': 'apple', 'city': 'NY', 'price': 2},
-         'fruit4': {'name': 'apple', 'city': 'SF', 'price': 3}}
+fruit_dicts = [{'name': 'orange', 'city': 'SF', 'price': 5},
+                {'name': 'orange', 'city': 'LA', 'price': 6},
+                {'name': 'apple', 'city': 'NY', 'price': 2},
+                {'name': 'apple', 'city': 'SF', 'price': 3}]
 
-second = [('orange', 'SF', 5),
-          ('orange', 'LA', 6),
-          ('apple', 'NY', 2),
-          ('apple', 'SF', 3)]
+fruit_tuple = [('orange', 'SF', 5),
+               ('orange', 'LA', 6),
+               ('apple', 'NY', 2),
+               ('apple', 'SF', 3)]
+
+
+#create a list that will hold the price key values and their
+#corrusponding fruit names as a tuple
+
+# Using the first DS
+def cheapest_fruit_name(fruit_dicts):
+
+cheapest_fruit = fruits_dicts[0]
+    for fruit in fruits_dicts:
+        if fruit['price'] < cheapest_fruit['price']:
+        cheapest_fruit = fruit
+
+    return cheapest_fruit['name']
+
+    ################### FIRST ATTEMPT #####################
+    # #creating an empty list to pair the fruit and their price in a tuple
+    # fruit_prices = []
+    # #iterating over the length of the dictionary and defining name, price
+    # for i in range(len(first)):
+    #     name = first[i]['name']
+    #     price = first[i]['price']
+    #     #adding the name and price into a list
+    #     fruit_prices.append((name, price))
+
+
+    # #finding the min price so creating a list of prices first
+    # prices = []
+    # for item in fruit_price:
+    #     fruit_name = item[0]
+    #     value = item[1]
+    #     prices.append(value)
+    #     cheapest = min(prices) #WHAT IT DOESN'T RELATE TO THE DAMN FRUIT NAME!!!!
 
 
 
-for key, values in first.items():
-    for k, v in values.items():
-        print k, v
+
+def cheapest_fruit_city(fruit_dicts): 
+
+    cheapest_fruit = fruits_dicts[0]
+    for fruit in fruits_dicts:
+        if fruit['price'] < cheapest_fruit['price']:
+        cheapest_fruit = fruit
+
+    return cheapest_fruit['city']
+
+
+
+def city_with_most_fruits(fruit_dicts):
+
+ 
+
+
+# def most_abundant_fruit():
+# #
+
+
+# ############################# Using the second DS ##############################
+
+# def cheapest_fruit_city_second():
+
+
+# def cheapest_fruit_city_second():
+# #take the value you got from the last function, and then find it's city
+
+# def city_with_most_fruits_second():
+# #find the city with the most fruits by seeing which city is mentioned multiple times
+# #prob can use a set to get the deleted value that was repeated and put it in a list
+
+# def most_abundant_fruit_second():
+# #
+
+
+# #find the minimum value from that list
+
+# #return the name key of that price value
+
+
+
+# # for key, values in first.items():
+# #     for k, v in values.items():
+# #         if k == 'price':
+# #         return min(v)
+
+
+#         # print k, v
