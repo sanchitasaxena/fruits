@@ -37,8 +37,8 @@ fruit_tuple = [('orange', 'SF', 5),
 # Using the first DS
 def cheapest_fruit_name(fruit_dicts):
 
-cheapest_fruit = fruits_dicts[0]
-    for fruit in fruits_dicts:
+cheapest_fruit = fruit_dicts[0]
+    for fruit in fruit_dicts:
         if fruit['price'] < cheapest_fruit['price']:
         cheapest_fruit = fruit
 
@@ -68,8 +68,8 @@ cheapest_fruit = fruits_dicts[0]
 
 def cheapest_fruit_city(fruit_dicts): 
 
-    cheapest_fruit = fruits_dicts[0]
-    for fruit in fruits_dicts:
+    cheapest_fruit = fruit_dicts[0]
+    for fruit in fruit_dicts:
         if fruit['price'] < cheapest_fruit['price']:
         cheapest_fruit = fruit
 
