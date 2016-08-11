@@ -37,10 +37,10 @@ fruit_tuple = [('orange', 'SF', 5),
 # Using the first DS
 def cheapest_fruit_name(fruit_dicts):
 
-cheapest_fruit = fruit_dicts[0]
+    cheapest_fruit = fruit_dicts[0]
     for fruit in fruit_dicts:
         if fruit['price'] < cheapest_fruit['price']:
-        cheapest_fruit = fruit
+            cheapest_fruit = fruit
 
     return cheapest_fruit['name']
 
@@ -66,52 +66,52 @@ cheapest_fruit = fruit_dicts[0]
 
 
 
-def cheapest_fruit_city(fruit_dicts): 
+def cheapest_fruit_city(fruit_dicts):
 
     cheapest_fruit = fruit_dicts[0]
     for fruit in fruit_dicts:
         if fruit['price'] < cheapest_fruit['price']:
-        cheapest_fruit = fruit
+            cheapest_fruit = fruit
 
     return cheapest_fruit['city']
 
 
 
-def city_with_most_fruits(fruit_dicts):
+def city_with_most_fruits_type(fruit_dicts):
 
- 
+    # the city with the most fruit, and what kinds of fruits
+    # output I want {'SF': ['apple','orange']}
+    cities = {}
+    types_of_fruits = []
 
+    for fruit in fruit_dicts:
+        key = fruit['city']
+        value = fruit['name']
+        types_of_fruits.append(value)
 
-# def most_abundant_fruit():
-# #
+        if key not in cities:
+            cities[key] = []
 
+        cities[key].append(value)
 
-# ############################# Using the second DS ##############################
+    max_fruits_length = 0
 
-# def cheapest_fruit_city_second():
+    for city, value in cities.items():
+        if len(value) > max_fruits_length:
+            max_fruits_length = len(value)
+            max_fruits_city = city
+            max_fruits = value
 
-
-# def cheapest_fruit_city_second():
-# #take the value you got from the last function, and then find it's city
-
-# def city_with_most_fruits_second():
-# #find the city with the most fruits by seeing which city is mentioned multiple times
-# #prob can use a set to get the deleted value that was repeated and put it in a list
-
-# def most_abundant_fruit_second():
-# #
-
-
-# #find the minimum value from that list
-
-# #return the name key of that price value
+    return (max_fruits_city, max_fruits)
 
 
-
-# # for key, values in first.items():
-# #     for k, v in values.items():
-# #         if k == 'price':
-# #         return min(v)
+print city_with_most_fruits_type(fruit_dicts)
 
 
-#         # print k, v
+
+
+
+    # def most_abundant_fruit():
+    # have no idea how to even start this one
+
+############################## Using the second DS ##############################
